@@ -1,0 +1,17 @@
+
+.reporter-info {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	box-shadow: var(--common-box-shadow-settings);
+	margin-right: 5px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}

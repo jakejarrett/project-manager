@@ -3,6 +3,7 @@ import Card from 'preact-material-components/Card';
 import 'preact-material-components/Card/style.css';
 import Goku from '../../assets/goku.png';
 import { Tags } from '../tags';
+import { Assignee } from '../assignee';
 import style from './style';
 
 export class IssueCard extends Component {
@@ -34,14 +35,7 @@ export class IssueCard extends Component {
 					</div>
 				</h1>
 				<p class={style['reporter-text']}>
-					<span>
-					{/*
-						Add in images & tooltip for image
-						Assignee component
-					*/}
-						<div class={style['image-container']} style={`background-image: url(${Goku})`}></div>
-						{issue.assignee}
-					</span>
+					<Assignee issue={{ assignee: issue.assignee, image: Goku }} />
 					{/* Priority component */}
 					<span class={`${style.priority} ${this.getPriorityColor(issue.priority)}`}>{this.capitalize(issue.priority)}</span>
 				</p>

@@ -3,6 +3,8 @@ import { IssueCard } from '../issue';
 import Dialog from 'preact-material-components/Dialog';
 import 'preact-material-components/Dialog/style.css';
 import { Tags } from '../tags';
+import { Assignee } from '../assignee';
+import Goku from '../../assets/goku.png';
 import style from './style';
 
 const formatDate = () => {
@@ -21,8 +23,9 @@ export class Sprint extends Component {
 	}
 
 	render ({ sprint }, { showingIssue, issue }) {
-
+		// Wait until we've essentially painted the new contents
 		window.requestAnimationFrame(_ => this.dialogRef && this.dialogRef.MDComponent.show());
+
 		return (
 			<div class={style.project}>
 				<p class={style.sprintCode}>
@@ -50,12 +53,11 @@ export class Sprint extends Component {
 						<Dialog.Header>#{issue.id} {issue.title}</Dialog.Header>
 						<Dialog.Body>
 							<div>
-								<div class={style.row}>
+								<div class={`row ${style['row-flex-between']}`}>
+									<Assignee issue={{ assignee: issue.assignee, image: Goku }} />
 									<Tags tags={issue.tags} />
 								</div>
-								<pre>
-									{JSON.stringify(issue, null, 2)}
-								</pre>
+								<p dangerouslySetInnerHTML={{ __html: issue.description }}></p>
 							</div>
 						</Dialog.Body>
 						<Dialog.Footer>

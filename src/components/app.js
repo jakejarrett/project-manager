@@ -30,7 +30,8 @@ const static_projects = [
 						reporter: 'jake',
 						priority: 'medium',
 						tags: 'feature,not a bug',
-						id: '1'
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
 					}
 				],
 				code: 'WOR-1',

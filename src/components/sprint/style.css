@@ -1,7 +1,3 @@
-.sprint {
-	margin-left: 5px;
-}
-
 .no-sprints {
 	font-weight: 500;
 	font-size: 1.2rem;
@@ -16,4 +12,8 @@
 .sprintCode small {
 	font-weight: 500;
 	margin-left: 10px;
+}
+
+.row-flex-between {
+    justify-content: space-between;
 }
