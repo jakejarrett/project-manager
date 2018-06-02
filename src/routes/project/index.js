@@ -20,7 +20,7 @@ export default class Project extends Component {
 						Sprint {project.currentSprint}
 					</small>
 				</h1>
-				<p>{project.owner}</p>
+				<p class={style.owner}>{project.owner}</p>
 				{/*
 					Add in tabs so that it's not a long mess here
 				*/}

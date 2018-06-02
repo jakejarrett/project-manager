@@ -14,7 +14,11 @@ import 'preact-material-components/Toolbar/style.css';
 
 export default class Header extends Component {
 
-	state = { darkThemeEnabled: false, canAddProject: false };
+	state = {
+		darkThemeEnabled: false,
+		canAddProject: false,
+		canEditProject: false,
+	};
 
 	closeDrawer() {
 		this.drawer.MDComponent.open = false;
@@ -55,14 +59,14 @@ export default class Header extends Component {
 	}
 
 	disallowAddingProject () {
-		this.setState({ canAddProject: false });
+		this.setState({ canAddProject: false, canEditProject: true });
 	}
 
 	allowAddingProject () {
-		this.setState({ canAddProject: true });
+		this.setState({ canAddProject: true, canEditProject: false });
 	}
 
-	render ({ addProject }, { canAddProject }) {
+	render ({ addProject, editProject }, { canAddProject, canEditProject }) {
 		return (
 			<div>
 				<Toolbar className="toolbar">
@@ -74,6 +78,7 @@ export default class Header extends Component {
 							<Toolbar.Title>Preact app</Toolbar.Title>
 						</Toolbar.Section>
 						<Toolbar.Section align-end>
+							{canEditProject === true && (<Toolbar.Icon onClick={editProject}>edit</Toolbar.Icon>)}
 							{canAddProject === true && (<Toolbar.Icon onClick={addProject}>add</Toolbar.Icon>)}
 							<Toolbar.Icon onClick={this.openSettings}>settings</Toolbar.Icon>
 						</Toolbar.Section>

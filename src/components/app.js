@@ -32,10 +32,81 @@ const static_projects = [
 						tags: 'feature,not a bug',
 						id: '1',
 						description: `This is a description. <b>It has HTML inside it</b>`
-					}
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
 				],
 				code: 'WOR-1',
 				dueDate: '2019-09-20',
+				active: true
+			},
+			{
+				issues: [
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					{
+						title: `Doesn't render`,
+						assignee: 'jake',
+						reporter: 'jake',
+						priority: 'medium',
+						tags: 'feature,not a bug',
+						id: '1',
+						description: `This is a description. <b>It has HTML inside it</b>`
+					},
+					
+				],
+				code: 'WOR-2',
+				dueDate: '2050-09-20',
 				active: true
 			}
 		],
@@ -111,6 +182,10 @@ export default class App extends Component {
 
 	addProject () {
 		//
+	}
+
+	editProject () {
+		
 	}
 
 	render() {

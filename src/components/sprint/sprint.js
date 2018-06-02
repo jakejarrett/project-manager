@@ -27,7 +27,7 @@ export class Sprint extends Component {
 		window.requestAnimationFrame(_ => this.dialogRef && this.dialogRef.MDComponent.show());
 
 		return (
-			<div class={style.project}>
+			<div class={style.sprint}>
 				<p class={style.sprintCode}>
 					{/* Sprint component */}
 					{sprint.code}
