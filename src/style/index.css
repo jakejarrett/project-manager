@@ -1,0 +1,115 @@
+/* TODO: Work on a proper color scheme. */
+:root {
+  --mdc-theme--tags-text: #898989;
+  --common-box-shadow-settings: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --mdc-theme--issue-reporter-text: #4776bc;
+  --mdc-theme--issue-low-priority: #4776bc;
+  --mdc-theme--issue-medium-priority: #ef9f5b;
+  --mdc-theme--issue-high-priority: #e46969;
+}
+
+.mdc-theme--dark {
+  --mdc-theme-surface: rgba(0, 0, 0, 0.3);
+	background-color: #333;
+	color: #fff;
+}
+
+.mdc-theme--dark .mdc-card {
+  color: #fff;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FAFAFA;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 400;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v29/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+}
+
+.row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.row > [class="mdc-card"] {
+	transition: transform 0.3s ease-in-out;
+	cursor: pointer;
+	width: calc(33.33% - 20px);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: none;
+	position: relative;
+	z-index: 2;
+	transform: translateX(0);
+	display: block;
+}
+
+.row > [class="mdc-card"]::after {
+	transition: transform 0.2s ease-in-out;
+	transition-delay: 0.1s;
+	box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 1);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.3;
+  display: block;
+  border-radius: 10px;
+}
+
+.row > [class="mdc-card"]:hover {
+	transform: translateY(-5px);
+}
+
+.row > [class="mdc-card"]:hover::after {
+	opacity: 0.4;
+}
+
+.row > [class="mdc-card"] h2 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 1.6rem;
+}

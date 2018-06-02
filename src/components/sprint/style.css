@@ -1,0 +1,19 @@
+.sprint {
+	margin-left: 5px;
+}
+
+.no-sprints {
+	font-weight: 500;
+	font-size: 1.2rem;
+	margin: 20px 0 0;
+}
+
+.sprintCode {
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+.sprintCode small {
+	font-weight: 500;
+	margin-left: 10px;
+}

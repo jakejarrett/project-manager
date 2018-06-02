@@ -1,0 +1,37 @@
+.project {
+	padding: 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.project h1 {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.project h1.project-title {
+	margin: 0;
+}
+
+.project p span.manager {
+	font-size: 1rem;
+	font-weight: 600;
+	display: block;
+}
+
+.project p {
+	font-weight: 400;
+	font-size: 0.95rem;
+	margin: 0;
+}
+
+.project .releases a {
+	color: var(--mdc-theme-on-primary);
+	display: block;
+	transition: transform 0.3s ease-in-out;
+}
+
+.project .releases a:hover {
+	transform: translateY(5px);
+}
+

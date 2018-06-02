@@ -1,0 +1,40 @@
+.priority.low-priority {
+	color: var(--mdc-theme--issue-low-priority)
+}
+
+.priority.medium-priority {
+	color: var(--mdc-theme--issue-medium-priority)
+}
+
+.priority.high-priority {
+	color: var(--mdc-theme--issue-high-priority)
+}
+
+h1.card-title {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: wrap;
+	margin: 0 0 20px 0;
+}
+
+.reporter-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 10px 0;
+	color: var( --mdc-theme--issue-reporter-text);
+	font-weight: 600;
+}
+
+.reporter-text .image-container {
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	box-shadow: var(--common-box-shadow-settings);
+	margin-right: 5px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
