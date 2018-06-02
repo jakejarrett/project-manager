@@ -110,7 +110,7 @@ export default class App extends Component {
 	}
 
 	addProject () {
-		console.log(this);
+		//
 	}
 
 	render() {
